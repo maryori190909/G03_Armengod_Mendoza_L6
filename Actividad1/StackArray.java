@@ -29,6 +29,9 @@ public class StackArray <E> implements Stack <E>{
         if(isEmpty()){
             throw new ExceptionIsEmpty("No hay tope, la pila esta vacia ");
         }
+        return array[tope];
     }
+
+    
 }
 
