@@ -43,7 +43,14 @@ public class StackArray <E> implements Stack <E>{
     @Override
     public String toString(){
         String resultado = "Pila [ ";
-        
+        for ( int i =tope; i>= 0; i--){
+            resultado += array[i];
+            if(i>0){
+                resultado += ", ";
+            }
+            resultado += "] ";
+            return resultado;
+        }
     }
 
 }
