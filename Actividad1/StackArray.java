@@ -40,6 +40,11 @@ public class StackArray <E> implements Stack <E>{
         return tope == array.length -1;
     }
 
+    @Override
+    public String toString(){
+        String resultado = "Pila [ ";
+        
+    }
 
 }
 
