@@ -13,7 +13,12 @@ public class Test {
             System.out.println("Eliminando elemento del tope: " + pi1.pop());
             System.out.println("Pila despues de eliminar tope: " + pi1);
 
-            
+            pi1.push(29);
+
+            Stack<String> pi2 = new StackArray<>(3);
+            pi2.push("perro");
+            pi2.push("gato");
+            pi2.push("conejo");
         }
     }
 
