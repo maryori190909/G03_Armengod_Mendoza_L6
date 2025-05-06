@@ -48,9 +48,9 @@ public class StackArray <E> implements Stack <E>{
             if(i>0){
                 resultado += ", ";
             }
+        }
             resultado += "] ";
             return resultado;
-        }
     }
 
 }
