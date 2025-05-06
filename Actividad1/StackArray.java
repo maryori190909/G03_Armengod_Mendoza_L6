@@ -7,4 +7,10 @@ public class StackArray <E> implements Stack <E>{
         this.tope = -1;
     }
 
+    public void push(E elem){
+        if (isFull()){
+            System.out.println(" La pila se encuentra llena, no se puede agregar mas elementos ");
+        }
+    }
+
 }
