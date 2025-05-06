@@ -36,6 +36,10 @@ public class StackArray <E> implements Stack <E>{
         return tope == -1;
     }
 
+    public boolean isFull(){
+        return tope == array.length -1;
+    }
+
 
 }
 
