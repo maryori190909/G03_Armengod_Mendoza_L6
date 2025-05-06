@@ -19,8 +19,10 @@ public class StackArray <E> implements Stack <E>{
     public E pop() throws ExceptionIsEmpty{
         if(isEmpty()){
             throw new ExceptionIsEmpty(" La pila esta vacia, no pueden sacarse elementos ");
-        
         }
+        E elem = array[tope];
+        tope--;
+        return elem;
     }
-
 }
+
