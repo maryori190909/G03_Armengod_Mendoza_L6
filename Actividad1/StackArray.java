@@ -24,5 +24,11 @@ public class StackArray <E> implements Stack <E>{
         tope--;
         return elem;
     }
+
+    public E top() throws ExceptionIsEmpty{
+        if(isEmpty()){
+            throw new ExceptionIsEmpty("No hay tope, la pila esta vacia ");
+        }
+    }
 }
 
