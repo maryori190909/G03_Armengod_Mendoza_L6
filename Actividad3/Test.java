@@ -8,6 +8,13 @@ public class Test {
             cl.enqueue("tarea B", 1);
             cl.enqueue("tarea C", 2);
             cl.enqueue("tarea D", 4);
+
+            System.out.println("cola segun la prioridad: " + cl);
+            System.out.println("frente: " + cl.front());
+            System.out.println("final: " + cl.back());
+
+            System.out.println("nueva cola, sin el de mayor prioridad: " + cl.dequeue());
+            System.out.println("cola actual: " + cl);
     }
 
 }
