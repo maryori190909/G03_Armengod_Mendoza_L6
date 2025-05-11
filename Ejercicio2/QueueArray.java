@@ -53,4 +53,15 @@ public class QueueArray<E> implements Queue<E>{
         return size == 0;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Cola [ ");
+        for (int i = 0; i < size; i++) {
+            sb.append(array[(front + i) % capacidad]);
+            if (i < size - 1) sb.append(", ");
+        }
+        sb.append(" ]");
+        return sb.toString();
+    }
+
 }
