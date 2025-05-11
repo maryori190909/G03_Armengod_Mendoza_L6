@@ -1,6 +1,6 @@
 package Actividad3;
 
-import Actividad2.ExceptionIsEmpty;
+import Actividad3.ExceptionIsEmpty;
 
 public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements PriorityQueue<E, N>{
     class EntryNode {
