@@ -1,4 +1,5 @@
 package Ejercicio3;
+import Ejercicio3.PriorityQueue;
 
 public class Test {
     public static void main(String[] args) {
