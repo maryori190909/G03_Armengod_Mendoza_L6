@@ -24,8 +24,9 @@ public class Test {
             cl2.enqueue("perro");
 
             System.out.println("cola2:"+ cl2);
-        }
-        
-    }
+        }catch(ExceptionIsEmpty e) {
+            System.out.println("Error: " + e.getMessage());
 
+    }
+    }
 }
