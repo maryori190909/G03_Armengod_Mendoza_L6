@@ -22,5 +22,18 @@ public class QueueLink <E> implements Queue<E>{
         last = nuevo;
     }
 
+    public E dequeue() throws ExceptionIsEmpty{
+        if(isEmpty()){
+            throw new ExceptionIsEmpty(" cola vacia, no hay elementos que eliminar");
+        }
+        E dato = first.getData();
+        first = first.getNext();
+        if(first == null){
+            last = null;
+        }
+        return dato;
+
+    }
+
 
 }
