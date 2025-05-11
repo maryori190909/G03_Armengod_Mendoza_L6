@@ -13,4 +13,20 @@ public class StackLink<E> implements Stack<E> {
         tope = nuevo;
     }
 
+    public E pop() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("la pila esta vacia no sepuede hacer pop.");
+        }
+        E dato = tope.getData();
+        tope = tope.getNext();
+        return dato;
+    }
+
+    public E top() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("la pila esta vacia, no hay elemento que sea tope.");
+        }
+        return tope.getData();
+    }
+
 }
