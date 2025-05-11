@@ -29,4 +29,24 @@ public class StackLink<E> implements Stack<E> {
         return tope.getData();
     }
 
+    public boolean isEmpty() {
+        return tope == null;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder resultado = new StringBuilder("Pila [ ");
+        Node<E> actual = tope;
+        while (actual != null) {
+            resultado.append(actual.getData());
+            if (actual.getNext() != null) {
+                resultado.append(", ");
+            }
+            actual = actual.getNext();
+        }
+        resultado.append(" ]");
+        return resultado.toString();
+    }
+
+
 }
