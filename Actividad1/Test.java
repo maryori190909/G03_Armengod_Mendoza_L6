@@ -19,6 +19,9 @@ public class Test {
             pi2.push("perro");
             pi2.push("gato");
             pi2.push("conejo");
+            System.out.println("pila 2: "+ pi2);
+        }catch(ExceptionIsEmpty e){
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
