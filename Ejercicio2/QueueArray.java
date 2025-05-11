@@ -35,4 +35,22 @@ public class QueueArray<E> implements Queue<E>{
         return elem;
     }
 
+    public E front() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("la cola esta vacia");
+        }
+        return array[front];
+    }
+
+    public E back() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("la cola esta vacia");
+        }
+        return array[back];
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
 }
