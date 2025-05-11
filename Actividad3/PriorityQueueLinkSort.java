@@ -78,5 +78,19 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
     public boolean isEmpty() {
         return first == null;
     }
+    @Override
+    public String toString() {
+        StringBuilder resultado = new StringBuilder("Cola segun prioridad [ ");
+        Node<EntryNode> actual = first;
+        while (actual != null) {
+            resultado.append(actual.getData());
+            if (actual.getNext() != null) {
+                resultado.append(" : ");
+            }
+            actual = actual.getNext();
+        }
+        resultado.append(" ]");
+        return resultado.toString();
+    }
 
 }
