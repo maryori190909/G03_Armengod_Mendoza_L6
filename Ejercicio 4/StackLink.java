@@ -16,4 +16,15 @@ public class StackLink<T> {
         tope = node;
     }
 
+    public T pop() {
+        if (isEmpty()) throw new RuntimeException("la pila esta vacia");
+        T value = tope.data;
+        tope = tope.next;
+        return value;
+    }
+
+    public boolean isEmpty() {
+        return tope == null;
+    }
+
 }
