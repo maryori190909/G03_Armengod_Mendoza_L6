@@ -1,6 +1,5 @@
 package Ejercicio3;
-
-import Actividad2.QueueLink;
+import Ejercicio3.QueueLink;
 
 public class PriorityQueueLinked <E> implements PriorityQueue<E, Integer> {
     private Queue<E>[] queues;
@@ -9,7 +8,7 @@ public class PriorityQueueLinked <E> implements PriorityQueue<E, Integer> {
         this.numP = numP;
         this.queues = new Queue[numP];
         for (int i = 0; i < numP; i++) {
-            queues[i] = new QueueLink<>();
+            queues[i] = new QueueLink<E>();
         }
     }
 
