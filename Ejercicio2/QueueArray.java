@@ -15,4 +15,14 @@ public class QueueArray<E> implements Queue<E>{
         this.size = 0;
     }
 
+    public void enqueue(E x) {
+        if (size == capacidad) {
+            System.out.println("la cola se encuentra llena, no se puede agregar mas.");
+            return;
+        }
+        back = (back + 1) % capacidad;
+        array[back] = x;
+        size++;
+    }
+
 }
