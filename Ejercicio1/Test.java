@@ -12,6 +12,14 @@ public class Test {
             System.out.println("elemento del tope: " + p1.top());
             System.out.println("elemento eliminado: " + p1.pop());
             System.out.println("pila nueva: " + p1);
+
+            Stack<String> p2 = new StackLink<>();
+            p2.push("cachorros");
+            p2.push("gatitos");
+            p2.push("elefantes");
+            System.out.println("pila de strings: " + p2);
+        }catch(ExceptionIsEmpty e){
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
