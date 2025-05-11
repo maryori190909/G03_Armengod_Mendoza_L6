@@ -13,5 +13,23 @@ public class PriorityQueueLinked <E> implements PriorityQueue<E, Integer> {
         }
     }
 
+    @Override
+    public void enqueue(E x, Integer pr) {
+        if (pr < 0 || pr >= numP) {
+            throw new IllegalArgumentException("la prioridad esta fuera de los parametros");
+        }
+        queues[pr].enqueue(x);
+    }
+
+    @Override
+    public E dequeue() throws ExceptionIsEmpty {
+        for (int i = 0; i < numP; i++) {
+            if (!queues[i].isEmpty()) {
+                return queues[i].dequeue();
+            }
+        }
+        throw new ExceptionIsEmpty("no hay elementos");
+    }
+
 
 }
