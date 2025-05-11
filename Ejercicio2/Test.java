@@ -18,6 +18,13 @@ public class Test {
 
             ce.enqueue(11);
             System.out.println("cola depues de agregar 11: " + ce);
+
+            Queue<String> cs = new QueueArray<>(2);
+            cs.enqueue("mujer");
+            cs.enqueue("hombre");
+            System.out.println("Cola de cadenas: " + cs);
+        }catch(ExceptionIsEmpty e){
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
