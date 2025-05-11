@@ -14,5 +14,12 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
             return "(" + data + ", la prioridad: " + priority + ")";
         }
     }
+    private Node<EntryNode> first;
+    private Node<EntryNode> last;
+
+    public PriorityQueueLinkSort() {
+        this.first = null;
+        this.last = null;
+    }
 
 }
