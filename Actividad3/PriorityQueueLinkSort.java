@@ -63,5 +63,20 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
     }
 
     @Override
+    public E front() throws ExceptionIsEmpty {
+        if (isEmpty()) throw new ExceptionIsEmpty("la cola esta vacia, no hay elementos adelante");
+        return first.getData().data;
+    }
+
+    @Override
+    public E back() throws ExceptionIsEmpty {
+        if (isEmpty()) throw new ExceptionIsEmpty("cola vacia, no hay elementos al final");
+        return last.getData().data;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return first == null;
+    }
 
 }
