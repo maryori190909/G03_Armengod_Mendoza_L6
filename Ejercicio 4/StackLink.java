@@ -9,5 +9,11 @@ public class StackLink<T> {
             this.data = data;
         }
     }
+    private Node<T> tope;
+    public void push(T value) {
+        Node<T> node = new Node<>(value);
+        node.next = tope;
+        tope = node;
+    }
 
 }
