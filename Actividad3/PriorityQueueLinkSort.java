@@ -1,5 +1,7 @@
 package Actividad3;
 
+import Actividad2.ExceptionIsEmpty;
+
 public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements PriorityQueue<E, N>{
     class EntryNode {
         E data;
@@ -50,7 +52,16 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
             }
         }
     }
-
     
+    @Override
+    public E dequeue() throws ExceptionIsEmpty {
+        if (isEmpty()) throw new ExceptionIsEmpty("la cola esta vacia");
+        E valor = first.getData().data;
+        first = first.getNext();
+        if (first == null) last = null;
+        return valor;
+    }
+
+    @Override
 
 }
