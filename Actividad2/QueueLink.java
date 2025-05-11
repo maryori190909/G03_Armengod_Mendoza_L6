@@ -32,7 +32,20 @@ public class QueueLink <E> implements Queue<E>{
             last = null;
         }
         return dato;
+    }
 
+    public E front() throws ExceptionIsEmpty{
+        if(isEmpty()){
+            throw new ExceptionIsEmpty(" Cola vacia, no hay elemento en el frente ");
+        }
+        return first.getData();
+    }
+
+    public E back() throws ExceptionIsEmpty{
+        if(isEmpty()){
+            throw new ExceptionIsEmpty(" cola vacia, no hay elemento al final");
+        }
+        return last.getData();
     }
 
 
