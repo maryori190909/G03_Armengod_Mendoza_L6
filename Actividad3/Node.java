@@ -9,4 +9,12 @@ public class Node<T> {
         this.next = null;
     }
 
+    public T getData(){
+        return data;
+    }
+
+    public void setData(T data){
+        this.data = data;
+    }
+
 }
