@@ -1,5 +1,9 @@
 package Ejercicio 4;
 
+import Ejercicio1.StackLink;
+
+
+
 public class Aplicacion {
     public static boolean symbolBalancing(String s) {
         StackLink<Character> stack = new StackLink<>();
@@ -8,8 +12,18 @@ public class Aplicacion {
             if (ch == '(' || ch == '[' || ch == '{') {
                 stack.push(ch);
             }
+            else if (ch == ')' || ch == ']' || ch == '}') {
+                if (stack.isEmpty()) {
+                    return false;}
+                char top = stack.pop();
+                if ((ch == ')' && top != '(') ||
+                    (ch == ']' && top != '[') ||
+                    (ch == '}' && top != '{')) {
+                    return false;
+                    }
         }
 
     }
-
+    return stack.isEmpty();
+    }
 }
