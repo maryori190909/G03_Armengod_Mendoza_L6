@@ -50,6 +50,23 @@ public class PriorityQueueLinked <E> implements PriorityQueue<E, Integer> {
         }
         throw new ExceptionIsEmpty("la cola esta vacia");
     }
+    @Override
+    public boolean isEmpty() {
+        for (int i = 0; i < numP; i++) {
+            if (!queues[i].isEmpty()) {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < numP; i++) {
+            sb.append("la prioridad ").append(i).append(": ").append(queues[i].toString()).append("\n");
+        }
+        return sb.toString();
+    }
 
 }
