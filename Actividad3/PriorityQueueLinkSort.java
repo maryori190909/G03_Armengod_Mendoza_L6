@@ -34,7 +34,23 @@ public class PriorityQueueLinkSort<E, N extends Comparable<N>> implements Priori
         }else{
             Node<EntryNode> actual = first;
             Node<EntryNode> anterior = null;
+
+            while (actual != null && pr.compareTo(actual.getData().priority) <= 0) {
+                anterior = actual;
+                actual = actual.getNext();
+            }
+
+            nuevoNodo.setNext(actual);
+            if (anterior != null) {
+                anterior.setNext(nuevoNodo);
+            }
+
+            if (nuevoNodo.getNext() == null) {
+                last = nuevoNodo;
+            }
         }
     }
+
+    
 
 }
