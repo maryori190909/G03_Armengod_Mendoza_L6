@@ -1,8 +1,5 @@
 package Ejercicio 4;
 
-import Ejercicio1.StackLink;
-
-
 
 public class Aplicacion {
     public static boolean symbolBalancing(String s) {
