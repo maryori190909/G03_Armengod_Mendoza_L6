@@ -25,4 +25,14 @@ public class QueueArray<E> implements Queue<E>{
         size++;
     }
 
+    public E dequeue() throws ExceptionIsEmpty {
+        if (isEmpty()) {
+            throw new ExceptionIsEmpty("la cola esta vacia");
+        }
+        E elem = array[front];
+        front = (front + 1) % capacidad ;
+        size--;
+        return elem;
+    }
+
 }
