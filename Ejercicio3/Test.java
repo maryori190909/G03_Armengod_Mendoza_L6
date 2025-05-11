@@ -24,6 +24,10 @@ public class Test {
             System.out.println("cola despues de eliminar 2:");
             System.out.println(pq);
 
+            System.out.println("la cola se encuentra vacia?: " + pq.isEmpty());
+
+        }catch(ExceptionIsEmpty e){
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
