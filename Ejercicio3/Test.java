@@ -15,9 +15,14 @@ public class Test {
             System.out.println("cola:");
             System.out.println(pq);
 
-            // Probamos front y back
             System.out.println("elemento del frente: " + pq.front());
             System.out.println("elemento al final: " + pq.back());
+
+            System.out.println("desencolando: " + pq.dequeue());
+            System.out.println("desencolando: " + pq.dequeue());
+
+            System.out.println("cola despues de eliminar 2:");
+            System.out.println(pq);
 
         }
     }
