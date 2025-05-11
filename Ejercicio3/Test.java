@@ -12,6 +12,13 @@ public class Test {
             pq.enqueue("tarea E", 2);
             pq.enqueue("tarea F", 0);
 
+            System.out.println("cola:");
+            System.out.println(pq);
+
+            // Probamos front y back
+            System.out.println("elemento del frente: " + pq.front());
+            System.out.println("elemento al final: " + pq.back());
+
         }
     }
 
